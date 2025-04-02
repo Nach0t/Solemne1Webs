@@ -3,11 +3,11 @@ on: [push]
 
 jobs:
   build:
-    runs-on: ${{ matrix.os }}
+    runs-on: ubuntu-22.04
+
     strategy:
       matrix:
-        os: [ubuntu-22.04, ubuntu-24.04]
-        python-version: ["3.8", "3.12"]
+        python-version: ["3.12"]
 
     steps:
       - name: Checkout repository
@@ -25,15 +25,16 @@ jobs:
         run: poetry install --with dev
 
       - name: Start uvicorn
-        run: poetry run uvicorn main:app --host 127.0.0.1 --port 8000 --reload &
-        env:
-          UVICORN_PID: $!
+        run: |
+          poetry run uvicorn main:app --host 127.0.0.1 --port 8000 --reload &
+          echo $! > uvicorn.pid
 
       - name: Wait for uvicorn
-        run: sleep 5 # Wait for uvicorn to start
+        run: sleep 5
 
       - name: Run tests
         run: poetry run pytest
 
       - name: Stop uvicorn
-        run: kill $UVICORN_PID
+        run: |
+          kill $(cat uvicorn.pid)
