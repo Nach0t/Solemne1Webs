@@ -25,7 +25,7 @@ jobs:
         run: poetry install
 
       - name: Install dependenciesss
-        run: source $(poetry env info --path)/bin/activate
+        run: poetry env use python
 
 
       - name: Start uvicorn
