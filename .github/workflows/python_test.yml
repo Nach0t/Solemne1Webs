@@ -22,15 +22,11 @@ jobs:
         run: pipx install poetry
 
       - name: Install dependencies
-        run: poetry install --with dev
+        run: poetry install
 
       - name: Start uvicorn
         run: |
-          poetry run uvicorn main:app --host 127.0.0.1 --port 8000 --reload &
-          echo $! > uvicorn.pid
-
-      - name: Wait for uvicorn
-        run: sleep 5
+          poetry run uvicorn main:app --host 127.0.0.1 --port 8000 --reload 
 
       - name: Run tests
         run: poetry run pytest
