@@ -24,6 +24,10 @@ jobs:
       - name: Install dependencies
         run: poetry install
 
+      - name: Install dependenciesss
+        run: source $(poetry env info --path)/bin/activate
+
+
       - name: Start uvicorn
         run: |
           poetry run uvicorn main:app --host 127.0.0.1 --port 8000 --reload 
