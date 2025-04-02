@@ -19,13 +19,12 @@ jobs:
           python-version: ${{ matrix.python-version }}
 
       - name: Install Poetry
-        run: pip install poetry
+        run: pipx install poetry
 
       - name: Install dependencies
-        run: poetry install --no-root
+        run: poetry install 
 
       - name: Run tests
-        run: |
-          poetry run uvicorn main:app --host 127.0.0.1 --port 8000 --reload &
-          sleep 5  # Esperar a que el servidor se inicie
-          poetry run pytest
+        run: poetry run uvicorn main:app --host 127.0.0.1 --port 8000 --reload
+      - name: test
+        run: poetry run pytest
