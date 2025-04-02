@@ -23,7 +23,7 @@ jobs:
           pip install -r requirements.txt
 
       - name: Install poetry
-        run: pip install poetry
+        run: pip install poetry pytest
 
       - name: Configure poetry
         run: poetry config virtualenvs.in-project true
