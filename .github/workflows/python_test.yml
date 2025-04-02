@@ -11,7 +11,7 @@ jobs:
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
 
       - name: Set up Python
         uses: actions/setup-python@v4
@@ -22,9 +22,18 @@ jobs:
         run: pipx install poetry
 
       - name: Install dependencies
-        run: poetry install 
+        run: poetry install --with dev
+
+      - name: Start uvicorn
+        run: poetry run uvicorn main:app --host 127.0.0.1 --port 8000 --reload &
+        env:
+          UVICORN_PID: $!
+
+      - name: Wait for uvicorn
+        run: sleep 5 # Wait for uvicorn to start
 
       - name: Run tests
-        run: poetry run uvicorn main:app --host 127.0.0.1 --port 8000 --reload
-      - name: test
         run: poetry run pytest
+
+      - name: Stop uvicorn
+        run: kill $UVICORN_PID
