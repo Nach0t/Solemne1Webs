@@ -1,10 +1,8 @@
-[project]
+[tool.poetry]
 name = "solemne1web"
 version = "0.1.0"
 description = ""
-authors = [
-    {name = "Ignacio Rehbein", email = "78046088+Nach0t@users.noreply.github.com"}
-]
+authors = ["Ignacio Rehbein <78046088+Nach0t@users.noreply.github.com>"]
 readme = "README.md"
 requires-python = ">=3.11"
 dependencies = [
