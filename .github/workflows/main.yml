@@ -5,6 +5,7 @@ on: [push]
 jobs:
   build:
     runs-on: ${{ matrix.os }}
+    timeout-minutes: 10
 
     strategy:
       matrix:
@@ -26,14 +27,17 @@ jobs:
       - name: Install Poetry
         run: pipx install poetry
 
-      - name: Configure Poetry
+      - name: Verificar instalación de Poetry
+        run: poetry --version
+
+      - name: Configurar entorno virtual en el proyecto
         run: poetry config virtualenvs.in-project true
 
-      - name: Ensure lockfile is up to date
+      - name: Actualizar lock file si es necesario
         run: poetry lock --no-update
 
-      - name: Install dependencies (without installing the root project)
+      - name: Instalar dependencias sin instalar el proyecto raíz
         run: poetry install --no-root
 
-      - name: Run tests
+      - name: Ejecutar pruebas
         run: poetry run pytest test_main.py
