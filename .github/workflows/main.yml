@@ -5,7 +5,7 @@ on: [push]
 jobs:
   build:
     runs-on: ${{ matrix.os }}
-    
+
     strategy:
       matrix:
         os: [ubuntu-22.04, ubuntu-24.04]
@@ -19,15 +19,21 @@ jobs:
         uses: actions/setup-python@v4
         with:
           python-version: ${{ matrix.python-version }}
-      
+
+      - name: Install pipx
+        run: python -m pip install pipx && python -m pipx ensurepath
+
       - name: Install Poetry
         run: pipx install poetry
 
       - name: Configure Poetry
         run: poetry config virtualenvs.in-project true
 
-      - name: Install dependencies
-        run: poetry install
+      - name: Ensure lockfile is up to date
+        run: poetry lock --no-update
+
+      - name: Install dependencies (without installing the root project)
+        run: poetry install --no-root
 
       - name: Run tests
         run: poetry run pytest test_main.py
