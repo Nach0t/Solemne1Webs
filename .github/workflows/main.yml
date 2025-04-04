@@ -39,5 +39,14 @@ jobs:
       - name: Instalar dependencias sin instalar el proyecto raíz
         run: poetry install --no-root
 
-      - name: Ejecutar pruebas
+      - name: Ejecutar Flake8 (lint)
+        run: poetry run flake8 .
+
+      - name: Ejecutar Black (chequeo de formato)
+        run: poetry run black --check .
+
+      - name: Ejecutar isort (chequeo de imports)
+        run: poetry run isort --check-only .
+
+      - name: Ejecutar pruebas unitarias
         run: poetry run pytest test_main.py
