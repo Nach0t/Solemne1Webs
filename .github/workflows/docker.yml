@@ -2,7 +2,7 @@ name: Docker Image CI
 
 on:
   push:
-    branches: [ "main" ]  # Cambia si usas otra rama
+    branches: [ "main" ]
 
 jobs:
   docker:
