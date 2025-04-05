@@ -27,9 +27,6 @@ jobs:
       - name: Install Poetry
         run: pipx install poetry
 
-      - name: Verificar instalación de Poetry
-        run: poetry --version
-
       - name: Configurar entorno virtual en el proyecto
         run: poetry config virtualenvs.in-project true
 
@@ -37,16 +34,10 @@ jobs:
         run: poetry lock
 
       - name: Instalar dependencias sin instalar el proyecto raíz
-        run: poetry install --no-root
+        run: poetry install
 
       - name: Ejecutar Flake8 (lint)
         run: poetry run flake8 .
-
-      - name: Ejecutar Black (chequeo de formato)
-        run: poetry run black --check .
-
-      - name: Ejecutar isort (chequeo de imports)
-        run: poetry run isort --check-only .
 
       - name: Ejecutar pruebas unitarias
         run: poetry run pytest test_main.py

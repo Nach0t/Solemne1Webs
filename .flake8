@@ -7,4 +7,5 @@ exclude =
     __pycache__,
     *.pyc,
     .git,
+    .pytest_cache,
     zope/interface/
