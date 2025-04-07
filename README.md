@@ -2,8 +2,6 @@
 
 ![CI/CD](https://github.com/nach0t/solemne1web/actions/workflows/main.yml/badge.svg)
 
- [Ver repositorio en GitHub](https://github.com/Nach0t/Solemne1Webs)
-
 ---
 
 ## Descripción
