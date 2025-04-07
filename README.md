@@ -2,6 +2,9 @@
 
 ![CI/CD](https://github.com/nach0t/solemne1web/actions/workflows/main.yml/badge.svg)
 
+ [Ver repositorio en GitHub](https://github.com/Nach0t/Solemne1Webs)
+
+---
 
 ## Descripción
 
@@ -21,6 +24,13 @@ El objetivo es poner en práctica el uso de contenedores **Docker** y flujos de 
 - Docker  
 - GitHub Actions (CI/CD)  
 - Flake8 y Ruff (linting)  
+
+---
+
+## Estructura del Proyecto
+
+- Proyecto gestionado con entorno virtual usando [Poetry](https://python-poetry.org/)
+- Archivo `.gitignore` configurado para excluir archivos del entorno virtual, dependencias y otros archivos innecesarios
 
 ---
 
@@ -89,6 +99,22 @@ El objetivo es poner en práctica el uso de contenedores **Docker** y flujos de 
 
 ---
 
+## Imagen en Docker Hub
+
+[![Docker Hub](https://img.shields.io/badge/Docker--Hub-nach0t%2Fsolemne1web-blue?style=for-the-badge&logo=docker)](https://hub.docker.com/r/nach0t/solemne1web)
+[![Automated Build](https://img.shields.io/docker/automated/nach0t/solemne1web?style=for-the-badge)](https://hub.docker.com/r/nach0t/solemne1web)
+![Image Size](https://img.shields.io/docker/image-size/nach0t/solemne1web/latest?style=for-the-badge)
+
+Puedes usar la imagen directamente desde Docker Hub:
+
+ [https://hub.docker.com/repository/docker/nach0t/solemne1web/general](https://hub.docker.com/repository/docker/nach0t/solemne1web/general)
+
+```bash
+docker pull nach0t/solemne1web:latest
+```
+
+---
+
 ## Cómo testear la API
 
 Para correr las pruebas unitarias con Pytest:
@@ -99,10 +125,19 @@ poetry run pytest test_main.py
 
 ---
 
+## Ejemplo de salida del endpoint
+
+```json
+{
+  "time": "2025-04-07 18:30:45"
+}
+```
+
+---
+
 ## CI/CD con GitHub Actions
 
 ![CI/CD](https://github.com/nach0t/solemne1web/actions/workflows/main.yml/badge.svg)
-
 
 Cada push a la rama `main` ejecuta automáticamente:
 
@@ -113,17 +148,3 @@ Cada push a la rama `main` ejecuta automáticamente:
 - Construcción de la imagen Docker  
 - Login en Docker Hub  
 - Publicación de la imagen como `nach0t/solemne1web:latest`  
-
----
-
-## Imagen en Docker Hub
-
- [![Docker Hub](https://img.shields.io/badge/Docker--Hub-nach0t%2Fsolemne1web-blue?style=for-the-badge&logo=docker)](https://hub.docker.com/r/nach0t/solemne1web) [![Automated Build](https://img.shields.io/docker/automated/nach0t/solemne1web?style=for-the-badge)](https://hub.docker.com/r/nach0t/solemne1web)  ![Image Size](https://img.shields.io/docker/image-size/nach0t/solemne1web/latest?style=for-the-badge)
-
-Puedes usar la imagen directamente desde Docker Hub:
-
-[https://hub.docker.com/r/nach0t/solemne1web](https://hub.docker.com/r/nach0t/solemne1web)
-
-```bash
-docker pull nach0t/solemne1web:latest
-```
