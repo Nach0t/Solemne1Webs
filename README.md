@@ -115,7 +115,7 @@ Cada push a la rama `main` ejecuta automáticamente:
 
 ## Imagen en Docker Hub
 
- [![Docker Hub](https://img.shields.io/badge/Docker--Hub-nach0t%2Fsolemne1web-blue?style=for-the-badge&logo=docker)](https://hub.docker.com/r/nach0t/solemne1web) ![Image Size](https://img.shields.io/docker/image-size/nach0t/solemne1web/latest?style=for-the-badge) [![Automated Build](https://img.shields.io/docker/automated/nach0t/solemne1web?style=for-the-badge)](https://hub.docker.com/r/nach0t/solemne1web) |
+ [![Docker Hub](https://img.shields.io/badge/Docker--Hub-nach0t%2Fsolemne1web-blue?style=for-the-badge&logo=docker)](https://hub.docker.com/r/nach0t/solemne1web) [![Automated Build](https://img.shields.io/docker/automated/nach0t/solemne1web?style=for-the-badge)](https://hub.docker.com/r/nach0t/solemne1web)  ![Image Size](https://img.shields.io/docker/image-size/nach0t/solemne1web/latest?style=for-the-badge)
 
 Puedes usar la imagen directamente desde Docker Hub:
 
