@@ -10,14 +10,14 @@ El objetivo es poner en práctica el uso de contenedores **Docker** y flujos de 
 
 ## Tecnologías Utilizadas
 
-- Python 3.12
-- FastAPI
-- Uvicorn
-- Poetry
-- Pytest
-- Docker
-- GitHub Actions (CI/CD)
-- Flake8 y Ruff (linting)
+- Python 3.12  
+- FastAPI  
+- Uvicorn  
+- Poetry  
+- Pytest  
+- Docker  
+- GitHub Actions (CI/CD)  
+- Flake8 y Ruff (linting)  
 
 ---
 
@@ -25,8 +25,37 @@ El objetivo es poner en práctica el uso de contenedores **Docker** y flujos de 
 
 1. Clona el repositorio:
 
-```bash
-git clone https://github.com/Nach0t/Solemne1Webs.git
-cd Solemne1Webs
+   ```bash
+   git clone https://github.com/Nach0t/Solemne1Webs.git
+   cd Solemne1Webs
+   ```
 
+2. Instala Poetry (si no lo tienes):
 
+   ```bash
+   pip install poetry
+   ```
+
+3. Instala las dependencias del proyecto:
+
+   ```bash
+   poetry install
+   ```
+
+4. Ejecuta la aplicación localmente:
+
+   ```bash
+   uvicorn main:app --reload --host 127.0.0.1 --port 8000
+   ```
+
+5. Abre en el navegador o usa curl para probar el endpoint:
+
+   ```bash
+   http://127.0.0.1:8000/time
+   ```
+
+   ```bash
+   curl http://127.0.0.1:8000/time
+   ```
+
+---
