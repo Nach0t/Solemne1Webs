@@ -101,6 +101,9 @@ poetry run pytest test_main.py
 
 ## CI/CD con GitHub Actions
 
+![CI/CD](https://github.com/nach0t/solemne1web/actions/workflows/main.yml/badge.svg)
+
+
 Cada push a la rama `main` ejecuta automáticamente:
 
 - Instalación de Python 3.12  
