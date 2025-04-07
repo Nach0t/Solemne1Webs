@@ -28,5 +28,4 @@ El objetivo es poner en práctica el uso de contenedores **Docker** y flujos de 
 ```bash
 git clone https://github.com/tu-usuario/tu-repo.git
 cd tu-repo
-```bash
-2. Clona el repositorio:
+
