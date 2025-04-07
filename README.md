@@ -30,7 +30,7 @@ El objetivo es poner en práctica el uso de contenedores **Docker** y flujos de 
 ## Estructura del Proyecto
 
 - Proyecto gestionado con entorno virtual usando [Poetry](https://python-poetry.org/)
-- Archivo `.gitignore` configurado para excluir archivos del entorno virtual, dependencias y otros archivos innecesarios
+- Archivo `.gitignore` configurado para excluir archivos innecesarios.
 
 ---
 
@@ -39,7 +39,7 @@ El objetivo es poner en práctica el uso de contenedores **Docker** y flujos de 
 1. Clona el repositorio:
 
    ```bash
-   git clone https://github.com/Nach0t/Solemne1Webs.git
+   git clone https://github.com/Nach0t/Solemne1Webs
    cd Solemne1Webs
    ```
 
