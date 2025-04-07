@@ -26,6 +26,6 @@ El objetivo es poner en práctica el uso de contenedores **Docker** y flujos de 
 1. Clona el repositorio:
 
 ```bash
-git clone https://github.com/tu-usuario/tu-repo.git
-cd tu-repo
+git clone https://github.com/Nach0t/Solemne1Webs.git
+cd Solemne1Webs
 
