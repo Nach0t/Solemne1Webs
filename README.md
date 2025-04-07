@@ -1,5 +1,7 @@
 # Solemne 1 - API de Hora Actual con FastAPI
 
+![Python CI/CD](https://github.com/nach0t/solemne1web/actions/workflows/ci-cd.yml/badge.svg)
+
 ## Descripción
 
 Este proyecto consiste en una API sencilla desarrollada con **FastAPI** que expone un endpoint `/time` para entregar la fecha y hora actual en formato JSON.
