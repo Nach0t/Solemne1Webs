@@ -1,7 +1,6 @@
 # Solemne 1 - API de Hora Actual con FastAPI
 
-![Python CI/CD](https://github.com/nach0t/solemne1web/actions/workflows/main.yml/badge.svg)   ![Docker Image](https://img.shields.io/docker/image-size/nach0t/solemne1web/latest)
-
+![Python CI/CD](https://github.com/nach0t/solemne1web/actions/workflows/main.yml/badge.svg) 
 ## Descripción
 
 Este proyecto consiste en una API sencilla desarrollada con **FastAPI** que expone un endpoint `/time` para entregar la fecha y hora actual en formato JSON.
@@ -22,6 +21,17 @@ El objetivo es poner en práctica el uso de contenedores **Docker** y flujos de 
 - Flake8 y Ruff (linting)  
 
 ---
+
+
+## 📦 Docker Hub
+
+| Métrica         | Badge |
+|-----------------|--------|
+| 🔗 Link         | [![Docker Hub](https://img.shields.io/badge/Docker--Hub-nach0t%2Fsolemne1web-blue?style=for-the-badge&logo=docker)](https://hub.docker.com/r/nach0t/solemne1web) |
+| 🔄 Build Auto   | [![Automated Build](https://img.shields.io/docker/automated/nach0t/solemne1web?style=for-the-badge)](https://hub.docker.com/r/nach0t/solemne1web) |
+| 📥 Pulls        | ![Docker Pulls](https://img.shields.io/docker/pulls/nach0t/solemne1web?style=for-the-badge) |
+| 📦 Tamaño Imagen | ![Image Size](https://img.shields.io/docker/image-size/nach0t/solemne1web/latest?style=for-the-badge) |
+
 
 ## Instrucciones para ejecutar localmente
 
