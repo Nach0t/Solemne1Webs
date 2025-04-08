@@ -97,7 +97,7 @@ El objetivo es poner en práctica el uso de contenedores **Docker** y flujos de 
 
 ---
 
-## Imagen en Docker Hub
+## Imagen en Docker Hub  [![Docker](https://img.shields.io/badge/Docker-2496ED?logo=docker&logoColor=fff)](#)
 
 [![Docker Hub](https://img.shields.io/badge/Docker--Hub-nach0t%2Fsolemne1web-blue?style=for-the-badge&logo=docker)](https://hub.docker.com/r/nach0t/solemne1web)
 [![Automated Build](https://img.shields.io/docker/automated/nach0t/solemne1web?style=for-the-badge)](https://hub.docker.com/r/nach0t/solemne1web)
