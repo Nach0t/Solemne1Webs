@@ -1,6 +1,6 @@
 # Solemne 1 - API de Hora Actual con FastAPI
 
-![CI/CD](https://github.com/nach0t/solemne1web/actions/workflows/main.yml/badge.svg)
+![CI/CD](https://github.com/nach0t/solemne1webs/actions/workflows/main.yml/badge.svg)
 
 ---
 
